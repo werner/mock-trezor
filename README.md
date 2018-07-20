@@ -5,4 +5,4 @@ Mock Trezor object for testing
     npm install --save-dev mock-trezor
     
 ## Usage
-    import * as trezor from 'mock-trezor'
+    import trezor from 'mock-trezor'
