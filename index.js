@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   DeviceList: function(configUrl) {
     return {
       removeListener: function (name, callback) { },
