@@ -27,6 +27,16 @@ module.exports = {
                     }
                   });
                 })
+              },
+              ethereumGetAddress: function (path) {
+                return new Promise((resolve, reject) => {
+                  resolve({
+                    message: {
+                      path: '872//2083//0//0',
+                      address: '2134567865543'
+                    }
+                  })
+                })
               }
             }
           })
