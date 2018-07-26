@@ -32,8 +32,8 @@ module.exports = {
                 return new Promise((resolve, reject) => {
                   resolve({
                     message: {
-                      path: '872//2083//0//0',
-                      address: '2134567865543'
+                      path: '44,37310,0,0,0',
+                      address: 'b5ae11144f988735aecf469b96b72f979736dbcc'
                     }
                   })
                 })
