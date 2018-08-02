@@ -56,13 +56,13 @@ module.exports = {
     return new Promise((resolve, reject) => { 
       switch(coin) {
         case 'bitcoin':
-          resolve({ success: true, payload: { xpub: 'xpub661mymwaqrbcg9mrzw2tccfkurxuotuw4j2b5m1hygevfhdxah5cdie93w2fr4tfmip3yss5pyywx3jwu166aewe5vxd9hcxshqwzvp7xkf' } });
+          resolve({ success: true, payload: { xpub: 'xpub6FnCEfWmb29ejBB96BNrhgJ4PJhSCazr4RPNG3iZ5a2d4YAJdo2bzgGrAdvuFAvrruFaWhkdstMB1eSp1gzRuBPWbZHaQbziVCRYnAMgbAD' } });
           break
         case 'testnet':
           resolve({ success: true, payload: { xpub: 'tpubD6NzVbkrYhZ4YSh1zgHc1L2fNXQmSZM1FEbVFpNGzK9J1GDuhRnfoLUA7Unzq44qHVviVtyKdfLjnJYiuTUTjYAJt6Un4svFfRPb7m6TvZk' } });
           break
         default:
-          resolve({ success: true, payload: { xpub: 'xpub661mymwaqrbcg9mrzw2tccfkurxuotuw4j2b5m1hygevfhdxah5cdie93w2fr4tfmip3yss5pyywx3jwu166aewe5vxd9hcxshqwzvp7xkf' } });
+          resolve({ success: true, payload: { xpub: 'xpub6FnCEfWmb29ejBB96BNrhgJ4PJhSCazr4RPNG3iZ5a2d4YAJdo2bzgGrAdvuFAvrruFaWhkdstMB1eSp1gzRuBPWbZHaQbziVCRYnAMgbAD' } });
           break
       }
     })
