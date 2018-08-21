@@ -1,6 +1,6 @@
 {
   "name": "mock-trezor",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Mock Trezor object for testing.",
   "main": "index.js",
   "scripts": {

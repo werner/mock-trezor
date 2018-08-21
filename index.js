@@ -40,7 +40,7 @@ module.exports = {
                   resolve({
                     message: {
                       path: '44,37310,0,0,0',
-                      address: 'b5ae11144f988735aecf469b96b72f979736dbcc'
+                      address: '0xb5ae11144f988735aecf469b96b72f979736dbcc'
                     }
                   })
                 })
@@ -73,7 +73,7 @@ module.exports = {
         success: true,
         payload: {
           path: '44,37310,0,0,0',
-          address: 'b5ae11144f988735aecf469b96b72f979736dbcc'
+          address: '0xb5ae11144f988735aecf469b96b72f979736dbcc'
         }
       })
     })
@@ -85,6 +85,18 @@ module.exports = {
         payload: {
           serializedTx: '000serializedTx',
           signatures: ['1', '2', '3']
+        }
+      });
+    })
+  },
+  ethereumSignTransaction: function({path, transaction}) {
+    return new Promise((resolve, reject) => {
+      resolve({
+        success: true,
+        payload: {
+          v: '0x23',
+          r: '0xalksjhd',
+          s: '0xoaukej'
         }
       });
     })
