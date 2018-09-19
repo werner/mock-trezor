@@ -100,5 +100,17 @@ module.exports = {
         }
       });
     })
+  },
+  getAddress: function({path, coin}) {
+    return new Promise((resolve, reject) => {
+      resolve({
+        success: true,
+        payload: {
+          address: 'mgYDL9xvE9bDAXQdWseNttP5V6iaRmBVZK',
+          path: [44, 1, 0, 0, 0],
+          serializedPath: '44,1,0,0,0'
+        }
+      });
+    })
   }
 }
