@@ -28,7 +28,7 @@ module.exports = {
                   resolve({
                     message: {
                       serialized: {
-                        serialized_tx: '000serializedTx',
+                        serialized_tx: '58e1b8b52e85d25c2566db3a5f39d26fdfd2849b9860e74a1b012f3b8a9b32c7',
                         signatures: ['1', '2', '3']
                       }
                     }
@@ -83,7 +83,7 @@ module.exports = {
       resolve({
         success: true,
         payload: {
-          serializedTx: '000serializedTx',
+          serializedTx: '58e1b8b52e85d25c2566db3a5f39d26fdfd2849b9860e74a1b012f3b8a9b32c7',
           signatures: ['1', '2', '3']
         }
       });
