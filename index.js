@@ -1,4 +1,4 @@
-import { AddressValidator } from 'address_validator.js';
+const AddressValidator = require('address_validator.js');
 
 module.exports = {
   DeviceList: function(configUrl) {
