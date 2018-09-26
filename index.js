@@ -1,3 +1,5 @@
+import { AddressValidator } from 'address_validator.js';
+
 module.exports = {
   DeviceList: function(configUrl) {
     return {
@@ -79,6 +81,12 @@ module.exports = {
     })
   },
   signTransaction: function({ inputs, outputs, coin }) {
+    let addressValidator = new AddressValidator();
+    outputs.forEach ((output) => {
+      if (!addressValidator.validate(output['address'])) {
+        return addressValidator.errorMessage;
+      }
+    });
     return new Promise((resolve, reject) => {
       resolve({
         success: true,
