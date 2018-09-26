@@ -1,6 +1,36 @@
-const AddressValidator = require('address_validator.js');
-
 module.exports = {
+  addressValidator: {
+    errorMessage: '',
+    normalize: function(s) {  
+      let x = String(s) || '';
+      return x.replace(/^[\s\xa0]+|[\s\xa0]+$/g, '');
+    },
+    check: function(s) {
+      
+      if (s.length < 26 || s.length > 35) {
+        return false;
+      }
+      
+      let re = /^[A-Z0-9]+$/i;
+      if (!re.test(s)) {
+        return false;
+      }
+      
+      return true;
+    },
+    validate: function(s) {
+
+      if (!this.normalize(s) || !this.check(s)) {
+        this.errorMessage = `Invalid parameters: Invalid Testnet output address ${s}`;
+        return false;
+      }
+
+      return true;
+    },
+    errorMessage: function() {
+      return this.errorMessage;
+    }
+  },
   DeviceList: function(configUrl) {
     return {
       removeListener: function (name, callback) { },
@@ -81,14 +111,19 @@ module.exports = {
     })
   },
   signTransaction: function({ inputs, outputs, coin }) {
-    let addressValidator = new AddressValidator();
-    outputs.forEach ((output) => {
-      if (!addressValidator.validate(output['address'])) {
-        return addressValidator.errorMessage;
-      }
-    });
+    let self = this;
     return new Promise((resolve, reject) => {
-      resolve({
+      outputs.forEach ((output) => {
+        if (!self.addressValidator.validate(output['address'])) {
+          return reject({
+              success: false,
+              payload: {
+                error: self.addressValidator.errorMessage
+              }
+            })
+        }
+      });
+      return resolve({
         success: true,
         payload: {
           serializedTx: '58e1b8b52e85d25c2566db3a5f39d26fdfd2849b9860e74a1b012f3b8a9b32c7',
