@@ -72,7 +72,7 @@ module.exports = {
                   resolve({
                     message: {
                       path: '44,37310,0,0,0',
-                      address: '0xb5ae11144f988735aecf469b96b72f979736dbcc'
+                      address: '0xad2c75b6c883f7e62959fb8727e30720faa30739'
                     }
                   })
                 })
@@ -105,7 +105,7 @@ module.exports = {
         success: true,
         payload: {
           path: '44,37310,0,0,0',
-          address: '0xb5ae11144f988735aecf469b96b72f979736dbcc'
+          address: '0xad2c75b6c883f7e62959fb8727e30720faa30739'
         }
       })
     })
