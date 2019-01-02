@@ -86,7 +86,7 @@ module.exports = {
   },
   getPublicKey: function ({path, coin}) {
     return new Promise((resolve, reject) => { 
-      switch(coin) {
+      switch(coin.toLowerCase()) {
         case 'bitcoin':
           resolve({ success: true, payload: { xpub: 'xpub6FnCEfWmb29ejBB96BNrhgJ4PJhSCazr4RPNG3iZ5a2d4YAJdo2bzgGrAdvuFAvrruFaWhkdstMB1eSp1gzRuBPWbZHaQbziVCRYnAMgbAD' } });
           break
